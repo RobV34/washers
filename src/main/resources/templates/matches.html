@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
+<div class="container">
+    <h1>Matches</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Match ID</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="match : ${matches}">
+            <td th:text="${match.id}"></td>
+            <td th:text="${match.team1.name}"></td>
+            <td th:text="${match.team2.name}"></td>
+            <td th:text="${match.result}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/">Back</a>
+</div>
 </body>
 </html>
+
+

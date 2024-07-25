@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Playoffs</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+<h1>Playoffs</h1>
+<div class="container">
+    <table>
+        <thead>
+        <tr>
+            <th>Round</th>
+            <th>Match</th>
+            <th>Winner</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="match : ${playoffs}">
+            <td th:text="${match.round}"></td>
+            <td th:text="${match.team1.name} + ' vs ' + ${match.team2.name}"></td>
+            <td th:text="${match.winner.name}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<a href="/">Back</a>
+</body>
+</html>
+
+
+

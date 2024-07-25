@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Robin Tournament</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
+<div class="container">
+    <h1>Round Robin Washer Tournament</h1>
+    <form action="/createTeams" method="post">
+        <h2>Create Teams</h2>
+        <label for="teams">Enter Teams (comma separated):</label>
+        <input type="text" id="teams" name="teams">
+        <input type="submit" value="Create Teams">
+    </form>
+    <form action="/generateSchedule" method="post">
+        <h2>Generate Schedule</h2>
+        <input type="submit" value="Generate Schedule">
+    </form>
+    <form action="/recordMatch" method="post">
+        <h2>Record Match</h2>
+        <label for="match">Select Match:</label>
+        <select id="match" name="match">
+            <!-- Options will be populated dynamically -->
+        </select>
+        <label for="result">Result:</label>
+        <select id="result" name="result">
+            <option value="W">Win</option>
+            <option value="L">Loss</option>
+        </select>
+        <input type="submit" value="Record Match">
+    </form>
+    <form action="/playoffs" method="post">
+        <h2>Generate Playoffs</h2>
+        <input type="submit" value="Generate Playoffs">
+    </form>
+</div>
 </body>
 </html>
+
+
